@@ -33,10 +33,8 @@ mason_null_ls.setup({
 
 
 local on_attach = function(client, bufnr)
-  print("attach language server: ", client.name)
   local opts = { noremap = true, silent = true, buffer = bufnr}
-  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts) vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
   vim.keymap.set('n', 'gD', function()
     vim.cmd([[vsplit]])
