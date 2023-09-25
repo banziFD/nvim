@@ -30,14 +30,6 @@ vim.keymap.set('n', "<leader>rn", function()
   vscode.notify('editor.action.rename')
 end,{})
 
-vim.keymap.set('i', "<c-b>", function() 
-  print('helldldop')
-  vscode.notify('workbench.action.toggleSidebarVisibility')
-end,{})
-vim.keymap.set('n', "<c-b>", function() 
-  print('helldldop')
-  vscode.notify('workbench.action.toggleSidebarVisibility')
-end,{})
 
 
 
