@@ -60,9 +60,6 @@ return require('packer').startup(function(use)
   -- comment
   use {
     'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
   }
 
   use({
@@ -71,5 +68,12 @@ return require('packer').startup(function(use)
       require("lsp_lines").setup()
     end,
   })
+
+
+  -- gitsigns
+  use 'lewis6991/gitsigns.nvim'
+
+  -- terminal
+  use "akinsho/toggleterm.nvim"
 
 end)

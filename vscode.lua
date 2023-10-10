@@ -11,29 +11,26 @@ local sys = vim.loop.os_uname().sysname
 vim.keymap.set('n', ";", ":", {})
 vim.keymap.set('n', ":", ";", {})
 
-vim.keymap.set('i', "<c-j>", function() 
-  vscode.notify('workbench.action.togglePanel')
-end,{})
-vim.keymap.set('n', "<c-j>", function() 
-  vscode.notify('workbench.action.togglePanel')
-end,{})
-
-vim.keymap.set('n', "gr", function() 
+vim.keymap.set('n', "gr", function()
   vscode.notify('references-view.findReferences')
-end,{})
+end, {})
 
-vim.keymap.set('n', "gi", function() 
+vim.keymap.set('n', "gi", function()
   vscode.notify('references-view.findImplementations')
-end,{})
+end, {})
 
-vim.keymap.set('n', "<leader>rn", function() 
+vim.keymap.set('n', "<leader>rn", function()
   vscode.notify('editor.action.rename')
-end,{})
+end, {})
 
+vim.keymap.set('n', "<leader>fm", function()
+  vscode.notify('editor.action.format')
+end, {})
 
-
-
-
-
-
-
+-- vim.keymap.set('i', "<c-j>", function()
+--   vscode.notify('workbench.action.togglePanel')
+-- end,{})
+-- vim.keymap.set('n', "<c-j>", function()
+--   vscode.notify('workbench.action.togglePanel')
+-- end,{})
+--

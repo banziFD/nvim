@@ -8,10 +8,10 @@ require("telescope").setup {
     dynamic_preview_title = true,
     mappings = {
       n = {
-        ['<c-p>'] = require('telescope.actions.layout').toggle_preview,
+        ['<leader>p'] = require('telescope.actions.layout').toggle_preview,
       },
       i = {
-        ['<c-p>'] = require('telescope.actions.layout').toggle_preview,
+        ['<leader>p'] = require('telescope.actions.layout').toggle_preview,
       },
     },
   },
@@ -31,7 +31,7 @@ local getVisualSelection = function()
   local text = vim.fn.getreg('v')
 
   text = string.gsub(text, "\n", "")
-  
+
   if #text > 0 then
     return text
   else
@@ -40,13 +40,12 @@ local getVisualSelection = function()
 end
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<c-p>', builtin.git_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('v', '<leader>fg', function()
+vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
+vim.keymap.set('v', '<leader>fs', function()
   local text = getVisualSelection()
   builtin.live_grep({ default_text = text })
 end, {})
-
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-
+vim.cmd "autocmd User TelescopePreviewerLoaded setlocal number"
