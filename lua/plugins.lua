@@ -73,7 +73,4 @@ return require('packer').startup(function(use)
   -- gitsigns
   use 'lewis6991/gitsigns.nvim'
 
-  -- terminal
-  use "akinsho/toggleterm.nvim"
-
 end)

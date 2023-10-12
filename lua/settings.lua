@@ -10,7 +10,7 @@ vim.opt.showtabline = 2
 vim.opt.number = true
 vim.opt.signcolumn = 'yes'
 vim.opt.cursorline = true
-vim.opt.scrolloff=10
+vim.opt.scrolloff = 10
 
 
 

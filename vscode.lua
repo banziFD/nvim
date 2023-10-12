@@ -6,7 +6,6 @@ vim.g.maplocalleader = ' '
 
 -- keymapping
 local vscode = require("vscode-neovim")
-local sys = vim.loop.os_uname().sysname
 
 vim.keymap.set('n', ";", ":", {})
 vim.keymap.set('n', ":", ";", {})
@@ -26,6 +25,25 @@ end, {})
 vim.keymap.set('n', "<leader>fm", function()
   vscode.notify('editor.action.format')
 end, {})
+
+vim.keymap.set('v', "<leader>fs", function()
+  vscode.notify('workbench.action.findInFiles')
+end, {})
+
+vim.keymap.set('n', "<leader>fs", function()
+  vscode.notify('workbench.action.findInFiles')
+end, {})
+
+vim.keymap.set('n', "<leader>e", function()
+  vscode.notify('workbench.action.toggleSidebarVisibility')
+end, {})
+
+vim.keymap.set('n', "<leader>ff", function()
+  vscode.notify('workbench.action.quickOpen')
+
+end, {})
+
+
 
 -- vim.keymap.set('i', "<c-j>", function()
 --   vscode.notify('workbench.action.togglePanel')

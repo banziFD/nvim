@@ -9,5 +9,4 @@ require("plugin-config.lsp-lines")
 require("plugin-config.indent-blankline")
 require("plugin-config.cmp")
 require("plugin-config.gitsigns")
-require("plugin-config.toggle-term")
 
