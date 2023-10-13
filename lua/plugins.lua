@@ -15,11 +15,11 @@ return require('packer').startup(function(use)
     },
   }
 
-  -- treesitter
-  use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
-
-  -- ts-rainbow
-  use 'p00f/nvim-ts-rainbow'
+  -- -- treesitter
+  -- use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+  --
+  -- -- ts-rainbow
+  -- use 'p00f/nvim-ts-rainbow'
 
   -- indent-blankline
   use 'lukas-reineke/indent-blankline.nvim'
