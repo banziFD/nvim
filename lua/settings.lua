@@ -11,7 +11,9 @@ vim.opt.number = true
 vim.opt.signcolumn = 'yes'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
-
+vim.diagnostic.config({
+  virtual_text = false,
+})
 
 
 

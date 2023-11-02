@@ -62,14 +62,6 @@ return require('packer').startup(function(use)
     'numToStr/Comment.nvim',
   }
 
-  use({
-    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    config = function()
-      require("lsp_lines").setup()
-    end,
-  })
-
-
   -- gitsigns
   use 'lewis6991/gitsigns.nvim'
 
