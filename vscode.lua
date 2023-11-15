@@ -23,7 +23,7 @@ vim.keymap.set('n', "<leader>rn", function()
 end, {})
 
 vim.keymap.set('n', "<leader>fm", function()
-  vscode.notify('editor.action.format')
+  vscode.notify('editor.action.formatDocument')
 end, {})
 
 vim.keymap.set('v', "<leader>fs", function()
@@ -40,7 +40,6 @@ end, {})
 
 vim.keymap.set('n', "<leader>ff", function()
   vscode.notify('workbench.action.quickOpen')
-
 end, {})
 
 
